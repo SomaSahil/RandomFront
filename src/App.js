@@ -12,7 +12,7 @@ function App() {
   const fetchData = async () => {
     setFetching(true); // Set fetching status to true
     try {
-      const response = await axios.get(`http://localhost:5000/getData`);
+      const response = await axios.get(`https://randomnumgen-jel1.onrender.com/getData`);
 
       const fetchedData = response.data.data;
 
@@ -77,13 +77,13 @@ function App() {
     console.log('data being sent: ',data)
 
     try {
-      const response = await axios.post('http://localhost:5000/addData', data);
+      const response = await axios.post('https://randomnumgen-jel1.onrender.com/addData', data);
       console.log('Data inserted successfully:', response.data);
 
        // Refresh the data after adding new entry
        const fetchData = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/getData`);
+          const response = await axios.get(`https://randomnumgen-jel1.onrender.com/getData`);
           
       const fetchedData = response.data.data;
       // Reverse the fetched data
